@@ -1,6 +1,9 @@
 import pytest
 from playwright.sync_api import sync_playwright
 
+#test_ is a function in ptest who is considered as pytest function
+
+
 @pytest.fixture
 def browser():
     with sync_playwright() as p:
@@ -9,7 +12,7 @@ def browser():
         yield browser
         browser.close()
     
-def test_login_blank_username(browser):
+def test_login_blank_username(page):
     page=browser.new_page()
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
@@ -21,7 +24,7 @@ def test_login_blank_username(browser):
     #assert error appears
     assert page.get_by_text("Required").first.is_visible()
 
-def test_login_blank_password(browser):
+def test_login_blank_password(page):
     page=browser.new_page()
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
@@ -33,7 +36,7 @@ def test_login_blank_password(browser):
     #assert error appears
     assert page.get_by_text("Required").first.is_visible()
 
-def test_login_wrong_password(browser):
+def test_login_wrong_password(page):
     page=browser.new_page()
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
@@ -45,7 +48,7 @@ def test_login_wrong_password(browser):
     #assert error appears
     assert page.get_by_text("Invalid Credentials").first.is_visible()
 
-def test_login_success(browser):
+def test_login_success(page):
     page=browser.new_page()
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
