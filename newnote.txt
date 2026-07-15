@@ -1,0 +1,10 @@
+1.  Check if the remote is operated with the battery or it a chargeable one.
+2.  ensure the compatible model of tv is present at the time of test.
+3.  ensure all the buttons are working fine.
+4.  check weather it is IR blaster remote or a bluetooth one.
+5.  If IR blaster check the coverage distance and various angle test.
+6.  IF the bluetooth one test the range and effective input if obstructed by a wall or objects.
+7.  Use the remote in non compatible model.
+8.  Press multiple button at once and observe what happen or command the tv gets.
+9.  Drop it with certain heights and test if it functions correctly.
+10. Test the mic of the remote and its sensentivity (if present)
