@@ -17,7 +17,7 @@ try:
     assert rsp==200
     print('The status code is ', rsp)
 except AssertionError:
-    print(f'The status code has to be 201, where as the server responed {rsp}')
+    print(f'The status code has to be 200, where as the server responed {rsp}')
 
 try:
     assert data["name"]==updated_user["name"]

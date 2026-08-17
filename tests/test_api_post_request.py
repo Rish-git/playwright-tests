@@ -8,11 +8,13 @@ new_user= {
 }
 
 response = requests.post("https://jsonplaceholder.typicode.com/users", json=new_user, verify=False)
+
 data = response.json()
 rsp = response.status_code
+
 try:
     assert rsp==201
-    print('The status code is ', response.status_code)
+    print('The status code is ', rsp)
 except AssertionError:
     print(f'The status code has to be 201, where as the server responed {rsp}')
 
