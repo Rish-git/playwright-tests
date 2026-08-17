@@ -4,7 +4,7 @@ import time
 
 with sync_playwright() as p:
     # Step 1 - Launch browser, headless=False means visible on screen
-    browser = p.chromium.launch(headless=False)
+    browser = p.chromium.launch(headless=True)
     page = browser.new_page()
 
     # Step 2 - Navigate to Google
